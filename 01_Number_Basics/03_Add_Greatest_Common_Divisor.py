@@ -1,16 +1,19 @@
-a = int(input("Enter the first number: "))
-b = int(input("Enter the second number: "))
+n = int(input("Enter the number: "))
 
-a = abs(a)
-b = abs(b)
+negative = False
 
-if a == 0 and b == 0:
-    print("GCD is undefined")
+if n < 0:
+    negative = True
+
+n = abs(n)
+reversed_number = 0
+
+while n > 0:
+    digit = n % 10
+    reversed_number = reversed_number * 10 + digit
+    n //= 10
+
+if negative:
+    print(-reversed_number)
 else:
-    gcd_value = 1
-
-    for i in range(1, min(a, b) + 1):
-        if a % i == 0 and b % i == 0:
-            gcd_value = i
-
-    print("GCD of", a, "and", b, "is:", gcd_value)
+    print(reversed_number)
