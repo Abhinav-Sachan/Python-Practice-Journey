@@ -7,11 +7,11 @@ for i in range(0,x):
     m = int(input("Enter the no. : "))
     n.append(m)
 
-sorted = True
+is_sorted = True
 for i in range(0,x):
     for j in range(i+1,x):
         if (n[i]>n[j]):
-            sorted = False
+            is_sorted = False
             break
 
 if (sorted == False):
