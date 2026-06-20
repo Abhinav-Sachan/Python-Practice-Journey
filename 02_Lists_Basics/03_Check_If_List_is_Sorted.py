@@ -1,6 +1,5 @@
 x = int(input("Enter the size of the list : "))
 
-t = []
 n = []
 
 for i in range(0,x):
