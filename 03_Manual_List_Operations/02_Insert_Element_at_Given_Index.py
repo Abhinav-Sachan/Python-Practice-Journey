@@ -8,15 +8,19 @@ for i in range(x):
 k = int(input("Enter the index at which number is to be inserted: "))
 h = int(input("Enter the number to be inserted: "))
 
-t = []
-for i in range(k, len(n)):
-    t.append(n[i])
+if k < 0 or k > len(n):
+    print("Invalid index")
+else:
+    t = []
 
-n = n[:k]
+    for i in range(k, len(n)):
+        t.append(n[i])
 
-n.append(h)
+    n = n[:k]
 
-for num in t:
-    n.append(num)
+    n.append(h)
 
-print("Updated list:", n)
+    for num in t:
+        n.append(num)
+
+    print("Updated list:", n)
